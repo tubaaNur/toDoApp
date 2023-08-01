@@ -15,16 +15,15 @@ class HomePage: UIViewController {
     }
     
     @IBAction func buttonDetail(_ sender: Any) {
-        let note = toDo(id: 1, name: "Not defteri")
-        
+        let note = toDo(id: 1, name: "Enter your meeting")
         performSegue(withIdentifier: "toDetail", sender: note)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail"{
             if let note = sender as? toDo{
-                let gidilecekVC = segue.destination as! DetailPage //Downcasting
-                gidilecekVC.note = note
+                let goToVC = segue.destination as! DetailPage
+                goToVC.note = note
             }
             
             
@@ -32,3 +31,5 @@ class HomePage: UIViewController {
     }
     
 }
+    
+

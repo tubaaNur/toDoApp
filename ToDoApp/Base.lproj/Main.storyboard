@@ -17,14 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9M-1k-e6i">
-                                <rect key="frame" x="133" y="402.33333333333331" width="127" height="47.666666666666686"/>
+                                <rect key="frame" x="116.00000000000001" y="404.66666666666669" width="161.33333333333337" height="43"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="DETAIL">
-                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go To Detail">
+                                    <backgroundConfiguration key="background" cornerRadius="18">
+                                        <color key="backgroundColor" red="0.15359925199999999" green="0.50023713859999996" blue="0.57453421309999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="buttonDetail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dld-hX-pLS"/>
-                                    <segue destination="8Ko-fx-Yfd" kind="show" identifier="toDetail" id="1qn-wM-ezw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -37,17 +40,21 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="xQs-TP-vnY">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="HTi-ex-ISv">
+                            <color key="tintColor" red="0.15359925199999999" green="0.50023713859999996" blue="0.57453421309999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="uur-H8-iS1" kind="show" id="c4T-2F-y7u"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="8Ko-fx-Yfd" kind="show" identifier="toDetail" id="hXg-yP-tcf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1011.4503816793892" y="3.5211267605633805"/>
         </scene>
-        <!--Registration-->
+        <!--Add ToDo-->
         <scene sceneID="ncZ-Nm-H2L">
             <objects>
                 <viewController id="uur-H8-iS1" customClass="RegistrationPage" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -55,19 +62,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="je9-SV-vRz">
-                                <rect key="frame" x="50" y="205" width="293" height="293"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="293" id="1mq-iR-Pra"/>
-                                </constraints>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Entry ToDo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="je9-SV-vRz">
+                                <rect key="frame" x="20" y="175" width="353" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bj8-3x-w9p">
-                                <rect key="frame" x="125.66666666666669" y="548" width="142" height="48.666666666666629"/>
+                                <rect key="frame" x="166.66666666666666" y="229" width="59.666666666666657" height="37"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="KAYDET">
-                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add">
+                                    <backgroundConfiguration key="background" cornerRadius="18">
+                                        <color key="backgroundColor" red="0.15359925199999999" green="0.50023713859999996" blue="0.57453421309999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="buttonSave:" destination="uur-H8-iS1" eventType="touchUpInside" id="j7j-hG-a6c"/>
@@ -77,16 +85,16 @@
                         <viewLayoutGuide key="safeArea" id="ZnX-Ag-3gV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bj8-3x-w9p" firstAttribute="top" secondItem="je9-SV-vRz" secondAttribute="bottom" constant="50" id="4Gw-1A-c6u"/>
-                            <constraint firstItem="je9-SV-vRz" firstAttribute="leading" secondItem="ZnX-Ag-3gV" secondAttribute="leading" constant="50" id="FUd-4b-WOG"/>
-                            <constraint firstItem="je9-SV-vRz" firstAttribute="top" secondItem="ZnX-Ag-3gV" secondAttribute="top" constant="50" id="cRz-rP-MFR"/>
-                            <constraint firstItem="bj8-3x-w9p" firstAttribute="centerX" secondItem="HrD-qZ-vcP" secondAttribute="centerX" id="qZN-y0-abh"/>
-                            <constraint firstItem="je9-SV-vRz" firstAttribute="centerX" secondItem="bj8-3x-w9p" secondAttribute="centerX" id="tWZ-Mj-PAs"/>
+                            <constraint firstItem="je9-SV-vRz" firstAttribute="leading" secondItem="ZnX-Ag-3gV" secondAttribute="leading" constant="20" id="2Fu-kJ-Lr7"/>
+                            <constraint firstItem="ZnX-Ag-3gV" firstAttribute="trailing" secondItem="je9-SV-vRz" secondAttribute="trailing" constant="20" id="Dme-4d-1Fj"/>
+                            <constraint firstItem="bj8-3x-w9p" firstAttribute="centerX" secondItem="HrD-qZ-vcP" secondAttribute="centerX" id="hf8-UR-X9n"/>
+                            <constraint firstItem="je9-SV-vRz" firstAttribute="top" secondItem="ZnX-Ag-3gV" secondAttribute="top" constant="20" id="k3g-RS-SNW"/>
+                            <constraint firstItem="bj8-3x-w9p" firstAttribute="top" secondItem="je9-SV-vRz" secondAttribute="bottom" constant="20" id="pJA-qV-DOP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Registration" id="Z9g-Nc-QC8"/>
+                    <navigationItem key="navigationItem" title="Add ToDo" id="Z9g-Nc-QC8"/>
                     <connections>
-                        <outlet property="tfNote" destination="je9-SV-vRz" id="DCY-6Q-kVa"/>
+                        <outlet property="tfNote" destination="je9-SV-vRz" id="o3B-MR-dAh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ikc-BR-tZW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -101,18 +109,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oPC-Zw-g5l">
-                                <rect key="frame" x="50" y="205" width="293" height="293"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="293" id="LW3-Ub-GEy"/>
-                                </constraints>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Not Defteri" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oPC-Zw-g5l">
+                                <rect key="frame" x="20" y="175" width="353" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xr9-I0-olE">
-                                <rect key="frame" x="159" y="548" width="75" height="35"/>
+                                <rect key="frame" x="152.33333333333334" y="229" width="88.666666666666657" height="37"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Update">
+                                    <backgroundConfiguration key="background" cornerRadius="18">
+                                        <color key="backgroundColor" red="0.15359925199999999" green="0.50023713859999996" blue="0.57453421309999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="buttonUpdate:" destination="8Ko-fx-Yfd" eventType="touchUpInside" id="xcj-NY-M9c"/>
                                 </connections>
@@ -121,11 +132,11 @@
                         <viewLayoutGuide key="safeArea" id="KNW-U4-XWD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="oPC-Zw-g5l" firstAttribute="top" secondItem="KNW-U4-XWD" secondAttribute="top" constant="50" id="Cf1-WK-wDY"/>
-                            <constraint firstItem="xr9-I0-olE" firstAttribute="centerX" secondItem="Fpl-8y-kJ2" secondAttribute="centerX" id="Juu-Z9-nRh"/>
-                            <constraint firstItem="oPC-Zw-g5l" firstAttribute="centerX" secondItem="Fpl-8y-kJ2" secondAttribute="centerX" id="c5J-Q9-m2G"/>
-                            <constraint firstItem="oPC-Zw-g5l" firstAttribute="leading" secondItem="KNW-U4-XWD" secondAttribute="leading" constant="50" id="u9M-gB-XoB"/>
-                            <constraint firstItem="xr9-I0-olE" firstAttribute="top" secondItem="oPC-Zw-g5l" secondAttribute="bottom" constant="50" id="yvU-QP-S4h"/>
+                            <constraint firstItem="KNW-U4-XWD" firstAttribute="trailing" secondItem="oPC-Zw-g5l" secondAttribute="trailing" constant="20" id="11V-lJ-rXg"/>
+                            <constraint firstItem="oPC-Zw-g5l" firstAttribute="leading" secondItem="KNW-U4-XWD" secondAttribute="leading" constant="20" id="7PG-96-5ok"/>
+                            <constraint firstItem="xr9-I0-olE" firstAttribute="centerX" secondItem="Fpl-8y-kJ2" secondAttribute="centerX" id="POq-sa-emg"/>
+                            <constraint firstItem="oPC-Zw-g5l" firstAttribute="top" secondItem="KNW-U4-XWD" secondAttribute="top" constant="20" id="ZJh-5S-mEK"/>
+                            <constraint firstItem="xr9-I0-olE" firstAttribute="top" secondItem="oPC-Zw-g5l" secondAttribute="bottom" constant="20" id="og2-6x-PlG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="nHi-5R-VVn"/>

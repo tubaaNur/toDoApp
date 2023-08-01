@@ -12,6 +12,7 @@ class DetailPage: UIViewController {
     var note:toDo?
     
     @IBOutlet weak var tfNoteDetail: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,15 +23,14 @@ class DetailPage: UIViewController {
 
     }
     
-
-    
     @IBAction func buttonUpdate(_ sender: Any) {
-        if let no = tfNoteDetail.text,  let n = note{
+        if let no = tfNoteDetail.text,
+           let n = note{
         update(id: n.id!, name: no)
-    }
+        }
     }
     func update(id:Int, name:String){
-        print("Note Güncelle: \(id)- \(name)")
+        print("Update ToDo: \(id)- \(name)")
         
         
     }

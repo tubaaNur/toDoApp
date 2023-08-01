@@ -24,6 +24,6 @@ class RegistrationPage: UIViewController {
     }
     
     func save(name:String) {
-        print("Note Kaydet : \(name)")
+        print("Save ToDo : \(name)")
     }
 }
