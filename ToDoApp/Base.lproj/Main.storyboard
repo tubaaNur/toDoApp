@@ -51,14 +51,14 @@
         <scene sceneID="ncZ-Nm-H2L">
             <objects>
                 <viewController id="uur-H8-iS1" customClass="RegistrationPage" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="HrD-qZ-vcP">
+                    <view key="view" contentMode="scaleToFill" id="HrD-qZ-vcP">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="je9-SV-vRz">
                                 <rect key="frame" x="50" y="205" width="293" height="293"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="293" id="V01-X4-2Xr"/>
+                                    <constraint firstAttribute="height" constant="293" id="1mq-iR-Pra"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -69,21 +69,25 @@
                                 <buttonConfiguration key="configuration" style="plain" title="KAYDET">
                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonSave:" destination="uur-H8-iS1" eventType="touchUpInside" id="j7j-hG-a6c"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZnX-Ag-3gV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="je9-SV-vRz" firstAttribute="top" secondItem="ZnX-Ag-3gV" secondAttribute="top" constant="50" id="3hN-AM-nqW"/>
-                            <constraint firstItem="je9-SV-vRz" firstAttribute="centerY" secondItem="HrD-qZ-vcP" secondAttribute="centerY" id="Ejw-fh-qQi"/>
-                            <constraint firstItem="ZnX-Ag-3gV" firstAttribute="trailing" secondItem="je9-SV-vRz" secondAttribute="trailing" constant="50" id="Lv2-pi-Ano"/>
-                            <constraint firstItem="bj8-3x-w9p" firstAttribute="top" secondItem="je9-SV-vRz" secondAttribute="bottom" constant="50" id="NzR-q8-rnE"/>
-                            <constraint firstItem="je9-SV-vRz" firstAttribute="leading" secondItem="ZnX-Ag-3gV" secondAttribute="leading" constant="50" id="XY3-h9-mRN"/>
+                            <constraint firstItem="bj8-3x-w9p" firstAttribute="top" secondItem="je9-SV-vRz" secondAttribute="bottom" constant="50" id="4Gw-1A-c6u"/>
+                            <constraint firstItem="je9-SV-vRz" firstAttribute="leading" secondItem="ZnX-Ag-3gV" secondAttribute="leading" constant="50" id="FUd-4b-WOG"/>
+                            <constraint firstItem="je9-SV-vRz" firstAttribute="top" secondItem="ZnX-Ag-3gV" secondAttribute="top" constant="50" id="cRz-rP-MFR"/>
                             <constraint firstItem="bj8-3x-w9p" firstAttribute="centerX" secondItem="HrD-qZ-vcP" secondAttribute="centerX" id="qZN-y0-abh"/>
-                            <constraint firstItem="je9-SV-vRz" firstAttribute="centerX" secondItem="HrD-qZ-vcP" secondAttribute="centerX" id="uKE-mZ-2Cz"/>
+                            <constraint firstItem="je9-SV-vRz" firstAttribute="centerX" secondItem="bj8-3x-w9p" secondAttribute="centerX" id="tWZ-Mj-PAs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Registration" id="Z9g-Nc-QC8"/>
+                    <connections>
+                        <outlet property="tfNote" destination="je9-SV-vRz" id="DCY-6Q-kVa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ikc-BR-tZW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,10 +100,38 @@
                     <view key="view" contentMode="scaleToFill" id="Fpl-8y-kJ2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oPC-Zw-g5l">
+                                <rect key="frame" x="50" y="205" width="293" height="293"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="293" id="LW3-Ub-GEy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xr9-I0-olE">
+                                <rect key="frame" x="159" y="548" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="buttonUpdate:" destination="8Ko-fx-Yfd" eventType="touchUpInside" id="xcj-NY-M9c"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="KNW-U4-XWD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oPC-Zw-g5l" firstAttribute="top" secondItem="KNW-U4-XWD" secondAttribute="top" constant="50" id="Cf1-WK-wDY"/>
+                            <constraint firstItem="xr9-I0-olE" firstAttribute="centerX" secondItem="Fpl-8y-kJ2" secondAttribute="centerX" id="Juu-Z9-nRh"/>
+                            <constraint firstItem="oPC-Zw-g5l" firstAttribute="centerX" secondItem="Fpl-8y-kJ2" secondAttribute="centerX" id="c5J-Q9-m2G"/>
+                            <constraint firstItem="oPC-Zw-g5l" firstAttribute="leading" secondItem="KNW-U4-XWD" secondAttribute="leading" constant="50" id="u9M-gB-XoB"/>
+                            <constraint firstItem="xr9-I0-olE" firstAttribute="top" secondItem="oPC-Zw-g5l" secondAttribute="bottom" constant="50" id="yvU-QP-S4h"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="nHi-5R-VVn"/>
+                    <connections>
+                        <outlet property="tfNoteDetail" destination="oPC-Zw-g5l" id="54V-0J-iWJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2WW-8h-ybu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

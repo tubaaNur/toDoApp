@@ -8,22 +8,30 @@
 import UIKit
 
 class DetailPage: UIViewController {
-
+    
+    var note:toDo?
+    
+    @IBOutlet weak var tfNoteDetail: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let n = note{
+            tfNoteDetail.text = n.name
+            
+        }
 
-        // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func buttonUpdate(_ sender: Any) {
+        if let no = tfNoteDetail.text,  let n = note{
+        update(id: n.id!, name: no)
     }
-    */
-
+    }
+    func update(id:Int, name:String){
+        print("Note Güncelle: \(id)- \(name)")
+        
+        
+    }
 }
