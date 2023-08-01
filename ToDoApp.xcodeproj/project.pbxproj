@@ -30,6 +30,7 @@
 		296DC2F12A78BC86009BBF4E /* toDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDo.swift; sourceTree = "<group>"; };
 		296DC2F52A78BDBE009BBF4E /* RegistrationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPage.swift; sourceTree = "<group>"; };
 		296DC2F72A78BDE8009BBF4E /* DetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPage.swift; sourceTree = "<group>"; };
+		296DC2F92A799D9C009BBF4E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +71,7 @@
 				296DC2E42A78BB6C009BBF4E /* Assets.xcassets */,
 				296DC2E62A78BB6C009BBF4E /* LaunchScreen.storyboard */,
 				296DC2E92A78BB6C009BBF4E /* Info.plist */,
+				296DC2F92A799D9C009BBF4E /* README.md */,
 			);
 			path = ToDoApp;
 			sourceTree = "<group>";
