@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		293C74272A7D043A0028B2BB /* cellToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C74262A7D043A0028B2BB /* cellToDo.swift */; };
 		296DC2DC2A78BB6B009BBF4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296DC2DB2A78BB6B009BBF4E /* AppDelegate.swift */; };
 		296DC2DE2A78BB6B009BBF4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296DC2DD2A78BB6B009BBF4E /* SceneDelegate.swift */; };
 		296DC2E02A78BB6B009BBF4E /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296DC2DF2A78BB6B009BBF4E /* HomePage.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		293C74262A7D043A0028B2BB /* cellToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellToDo.swift; sourceTree = "<group>"; };
 		296DC2D82A78BB6B009BBF4E /* ToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		296DC2DB2A78BB6B009BBF4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		296DC2DD2A78BB6B009BBF4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		293C74252A7D04150028B2BB /* tableView */ = {
+			isa = PBXGroup;
+			children = (
+				293C74262A7D043A0028B2BB /* cellToDo.swift */,
+			);
+			path = tableView;
+			sourceTree = "<group>";
+		};
 		296DC2CF2A78BB6B009BBF4E = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +89,7 @@
 		296DC2EF2A78BC03009BBF4E /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				293C74252A7D04150028B2BB /* tableView */,
 				296DC2F02A78BC1D009BBF4E /* views */,
 			);
 			path = ui;
@@ -184,6 +195,7 @@
 				296DC2F62A78BDBE009BBF4E /* RegistrationPage.swift in Sources */,
 				296DC2E02A78BB6B009BBF4E /* HomePage.swift in Sources */,
 				296DC2DC2A78BB6B009BBF4E /* AppDelegate.swift in Sources */,
+				293C74272A7D043A0028B2BB /* cellToDo.swift in Sources */,
 				296DC2F82A78BDE8009BBF4E /* DetailPage.swift in Sources */,
 				296DC2DE2A78BB6B009BBF4E /* SceneDelegate.swift in Sources */,
 				296DC2F22A78BC86009BBF4E /* toDo.swift in Sources */,

@@ -9,9 +9,35 @@ import UIKit
 
 class HomePage: UIViewController {
     
+    @IBOutlet weak var searchBar: UITableView!
+    @IBOutlet weak var tableview: UITableView!
+    
+    var todoList = [toDo]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableview.delegate = self
+        tableview.dataSource = self
+        let t1 = toDo(id: 1, name: "Topluluk toplantısına katıl")
+        let t2 = toDo(id: 2, name: "iOS Örnek caseleri çözmeye başla")
+        let t3 = toDo(id: 3, name: "Quizine çalış")
+        let t4 = toDo(id: 4, name: "Yemek yap")
+        let t5 = toDo(id: 5, name: "kjdlkhjsdf")
+        let t6 = toDo(id: 6, name: "ajkhjsldhkj")
+        let t7 = toDo(id: 7, name: "sdkjflkg")
+        let t8 = toDo(id: 8, name: "skjdlkjf")
+        let t9 = toDo(id: 9, name: "skjldkşjf")
+        
+        todoList.append(t1)
+        todoList.append(t2)
+        todoList.append(t3)
+        todoList.append(t4)
+        todoList.append(t5)
+        todoList.append(t6)
+        todoList.append(t7)
+        todoList.append(t8)
+        todoList.append(t9)
     }
     
     @IBAction func buttonDetail(_ sender: Any) {
@@ -31,5 +57,58 @@ class HomePage: UIViewController {
     }
     
 }
+
+extension HomePage : UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("Search ToDo: \(searchText)")
+
+    }
+}
+
+extension HomePage : UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return todoList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let toDo = todoList[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellToDo") as! cellToDo
+        
+        cell.labelToDo.text = toDo.name
+        
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let person = todoList[indexPath.row]
+        performSegue(withIdentifier: "toDetail", sender: person)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete"){contextualAction,view,bool in
+            let toDo = self.todoList[indexPath.row]
+            
+            let alert = UIAlertController(title: "Delete Process", message: "\(toDo.name!) silinsin mi?", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            alert.addAction(cancelAction)
+            
+            let okAction = UIAlertAction(title: "Okay", style: .destructive){
+                action in print("Kişi sil : \(toDo.id!)")
+            }
+            alert.addAction(okAction)
+            self.present(alert, animated: true)
+        }
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+    
+}
+
     
 
