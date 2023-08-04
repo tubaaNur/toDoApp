@@ -94,7 +94,7 @@ extension HomePage : UITableViewDelegate, UITableViewDataSource{
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete"){contextualAction,view,bool in
             let toDo = self.todoList[indexPath.row]
             
-            let alert = UIAlertController(title: "Delete Process", message: "\(toDo.name!) silinsin mi?", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Delete Process", message: "\(toDo.name!) delete?", preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
             alert.addAction(cancelAction)
             
