@@ -2,7 +2,7 @@
 UP School & Akbank IOS Bootcamp Homework
 
 <p align="center">
- <img src="https://github.com/tubaaNur/toDoApp/tree/main/ToDoApp/Assets.xcassets/HomePage.imageset" 
+ <img src="https://github.com/tubaaNur/toDoApp/blob/main/ToDoApp/Assets.xcassets/HomePage.imageset/Simulator%20Screenshot%20-%20iPhone%2014%20Pro%20-%202023-08-04%20at%2016.23.03.png" 
 width="450" height="975">
 </p>
 
