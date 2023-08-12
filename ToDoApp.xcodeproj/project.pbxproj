@@ -17,6 +17,11 @@
 		296DC2F22A78BC86009BBF4E /* toDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296DC2F12A78BC86009BBF4E /* toDo.swift */; };
 		296DC2F62A78BDBE009BBF4E /* RegistrationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296DC2F52A78BDBE009BBF4E /* RegistrationPage.swift */; };
 		296DC2F82A78BDE8009BBF4E /* DetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296DC2F72A78BDE8009BBF4E /* DetailPage.swift */; };
+		29B38B4C2A8769C2005CD156 /* ToDoDaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B38B4B2A8769C2005CD156 /* ToDoDaoRepository.swift */; };
+		29B38B4F2A8769F3005CD156 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B38B4E2A8769F3005CD156 /* HomePageViewModel.swift */; };
+		29B38B512A876A08005CD156 /* RegistrationPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B38B502A876A08005CD156 /* RegistrationPageViewModel.swift */; };
+		29B38B532A876A16005CD156 /* DetailPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B38B522A876A16005CD156 /* DetailPageViewModel.swift */; };
+		29B38B562A876A6C005CD156 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 29B38B552A876A6C005CD156 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +38,10 @@
 		296DC2F52A78BDBE009BBF4E /* RegistrationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPage.swift; sourceTree = "<group>"; };
 		296DC2F72A78BDE8009BBF4E /* DetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPage.swift; sourceTree = "<group>"; };
 		296DC2F92A799D9C009BBF4E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		29B38B4B2A8769C2005CD156 /* ToDoDaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDaoRepository.swift; sourceTree = "<group>"; };
+		29B38B4E2A8769F3005CD156 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
+		29B38B502A876A08005CD156 /* RegistrationPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPageViewModel.swift; sourceTree = "<group>"; };
+		29B38B522A876A16005CD156 /* DetailPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29B38B562A876A6C005CD156 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +99,7 @@
 		296DC2EF2A78BC03009BBF4E /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				29B38B4D2A8769D1005CD156 /* viewModel */,
 				293C74252A7D04150028B2BB /* tableView */,
 				296DC2F02A78BC1D009BBF4E /* views */,
 			);
@@ -108,6 +119,7 @@
 		296DC2F32A78BCEB009BBF4E /* data */ = {
 			isa = PBXGroup;
 			children = (
+				29B38B4A2A8769A6005CD156 /* Repository */,
 				296DC2F42A78BCF9009BBF4E /* entity */,
 			);
 			path = data;
@@ -119,6 +131,24 @@
 				296DC2F12A78BC86009BBF4E /* toDo.swift */,
 			);
 			path = entity;
+			sourceTree = "<group>";
+		};
+		29B38B4A2A8769A6005CD156 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				29B38B4B2A8769C2005CD156 /* ToDoDaoRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		29B38B4D2A8769D1005CD156 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				29B38B4E2A8769F3005CD156 /* HomePageViewModel.swift */,
+				29B38B502A876A08005CD156 /* RegistrationPageViewModel.swift */,
+				29B38B522A876A16005CD156 /* DetailPageViewModel.swift */,
+			);
+			path = viewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +167,9 @@
 			dependencies = (
 			);
 			name = ToDoApp;
+			packageProductDependencies = (
+				29B38B552A876A6C005CD156 /* RxSwift */,
+			);
 			productName = ToDoApp;
 			productReference = 296DC2D82A78BB6B009BBF4E /* ToDoApp.app */;
 			productType = "com.apple.product-type.application";
@@ -165,6 +198,9 @@
 				Base,
 			);
 			mainGroup = 296DC2CF2A78BB6B009BBF4E;
+			packageReferences = (
+				29B38B542A876A6C005CD156 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 296DC2D92A78BB6B009BBF4E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -194,10 +230,14 @@
 			files = (
 				296DC2F62A78BDBE009BBF4E /* RegistrationPage.swift in Sources */,
 				296DC2E02A78BB6B009BBF4E /* HomePage.swift in Sources */,
+				29B38B4F2A8769F3005CD156 /* HomePageViewModel.swift in Sources */,
 				296DC2DC2A78BB6B009BBF4E /* AppDelegate.swift in Sources */,
 				293C74272A7D043A0028B2BB /* cellToDo.swift in Sources */,
+				29B38B4C2A8769C2005CD156 /* ToDoDaoRepository.swift in Sources */,
+				29B38B532A876A16005CD156 /* DetailPageViewModel.swift in Sources */,
 				296DC2F82A78BDE8009BBF4E /* DetailPage.swift in Sources */,
 				296DC2DE2A78BB6B009BBF4E /* SceneDelegate.swift in Sources */,
+				29B38B512A876A08005CD156 /* RegistrationPageViewModel.swift in Sources */,
 				296DC2F22A78BC86009BBF4E /* toDo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +454,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		29B38B542A876A6C005CD156 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		29B38B552A876A6C005CD156 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29B38B542A876A6C005CD156 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 296DC2D02A78BB6B009BBF4E /* Project object */;
 }

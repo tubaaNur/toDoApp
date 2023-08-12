@@ -7,43 +7,33 @@
 
 import UIKit
 
-class HomePage: UIViewController {
+class HomePage: UIViewController{
     
-    @IBOutlet weak var searchBar: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     @IBOutlet weak var tableview: UITableView!
     
     var todoList = [toDo]()
+    var viewModel = HomePageViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searchBar.delegate = self
         tableview.delegate = self
         tableview.dataSource = self
-        let t1 = toDo(id: 1, name: "Join the community meeting")
-        let t2 = toDo(id: 2, name: "iOS Start solving sample cases")
-        let t3 = toDo(id: 3, name: "Study your quiz")
-        let t4 = toDo(id: 4, name: "Make dinner")
-        let t5 = toDo(id: 5, name: "There is a flight to Istanbul on 20 August")
-        let t6 = toDo(id: 6, name: "Go to a hairdresser appointment")
-        let t7 = toDo(id: 7, name: "Going to the gym in the evening")
-        let t8 = toDo(id: 8, name: "Meeting with the girls tomorrow night")
-        let t9 = toDo(id: 9, name: "Sleep at 22:00")
         
-        todoList.append(t1)
-        todoList.append(t2)
-        todoList.append(t3)
-        todoList.append(t4)
-        todoList.append(t5)
-        todoList.append(t6)
-        todoList.append(t7)
-        todoList.append(t8)
-        todoList.append(t9)
+        _ = viewModel.toDoList.subscribe(onNext: { list in
+            self.todoList = list
+            self.tableview.reloadData()
+        })
     }
     
-    @IBAction func buttonDetail(_ sender: Any) {
-        let note = toDo(id: 1, name: "Enter your meeting")
-        performSegue(withIdentifier: "toDetail", sender: note)
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.toDoLoad()
     }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail"{
@@ -52,7 +42,6 @@ class HomePage: UIViewController {
                 goToVC.note = note
             }
             
-            
         }
     }
     
@@ -60,7 +49,7 @@ class HomePage: UIViewController {
 
 extension HomePage : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("Search ToDo: \(searchText)")
+        viewModel.search(searchWords: searchText)
 
     }
 }
