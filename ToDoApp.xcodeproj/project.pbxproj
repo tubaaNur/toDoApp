@@ -83,6 +83,7 @@
 		296DC2DA2A78BB6B009BBF4E /* ToDoApp */ = {
 			isa = PBXGroup;
 			children = (
+				296DC2F92A799D9C009BBF4E /* README.md */,
 				296DC2DB2A78BB6B009BBF4E /* AppDelegate.swift */,
 				296DC2DD2A78BB6B009BBF4E /* SceneDelegate.swift */,
 				296DC2EF2A78BC03009BBF4E /* ui */,
@@ -91,7 +92,6 @@
 				296DC2E42A78BB6C009BBF4E /* Assets.xcassets */,
 				296DC2E62A78BB6C009BBF4E /* LaunchScreen.storyboard */,
 				296DC2E92A78BB6C009BBF4E /* Info.plist */,
-				296DC2F92A799D9C009BBF4E /* README.md */,
 			);
 			path = ToDoApp;
 			sourceTree = "<group>";
