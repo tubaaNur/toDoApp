@@ -67,6 +67,7 @@
 		296DC2CF2A78BB6B009BBF4E = {
 			isa = PBXGroup;
 			children = (
+				296DC2F92A799D9C009BBF4E /* README.md */,
 				296DC2DA2A78BB6B009BBF4E /* ToDoApp */,
 				296DC2D92A78BB6B009BBF4E /* Products */,
 			);
@@ -83,7 +84,6 @@
 		296DC2DA2A78BB6B009BBF4E /* ToDoApp */ = {
 			isa = PBXGroup;
 			children = (
-				296DC2F92A799D9C009BBF4E /* README.md */,
 				296DC2DB2A78BB6B009BBF4E /* AppDelegate.swift */,
 				296DC2DD2A78BB6B009BBF4E /* SceneDelegate.swift */,
 				296DC2EF2A78BC03009BBF4E /* ui */,
