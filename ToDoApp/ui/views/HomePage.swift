@@ -88,7 +88,7 @@ extension HomePage : UITableViewDelegate, UITableViewDataSource{
             alert.addAction(cancelAction)
             
             let okAction = UIAlertAction(title: "Okay", style: .destructive){
-                action in print("Kişi sil : \(toDo.id!)")
+                action in self.viewModel.delete(id: toDo.id!)
             }
             alert.addAction(okAction)
             self.present(alert, animated: true)

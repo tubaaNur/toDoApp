@@ -22,6 +22,12 @@
 		29B38B512A876A08005CD156 /* RegistrationPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B38B502A876A08005CD156 /* RegistrationPageViewModel.swift */; };
 		29B38B532A876A16005CD156 /* DetailPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B38B522A876A16005CD156 /* DetailPageViewModel.swift */; };
 		29B38B562A876A6C005CD156 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 29B38B552A876A6C005CD156 /* RxSwift */; };
+		29B38C432A8CAB47005CD156 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B38C382A8CAB44005CD156 /* FMDatabaseAdditions.m */; };
+		29B38C442A8CAB47005CD156 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B38C3C2A8CAB45005CD156 /* FMDatabase.m */; };
+		29B38C452A8CAB47005CD156 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B38C3D2A8CAB45005CD156 /* FMResultSet.m */; };
+		29B38C462A8CAB47005CD156 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B38C3F2A8CAB46005CD156 /* FMDatabaseQueue.m */; };
+		29B38C472A8CAB47005CD156 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B38C402A8CAB46005CD156 /* FMDatabasePool.m */; };
+		29B38C492A8CAC78005CD156 /* toDo.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 29B38C482A8CAC78005CD156 /* toDo.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +48,20 @@
 		29B38B4E2A8769F3005CD156 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		29B38B502A876A08005CD156 /* RegistrationPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPageViewModel.swift; sourceTree = "<group>"; };
 		29B38B522A876A16005CD156 /* DetailPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewModel.swift; sourceTree = "<group>"; };
+		29B38C362A8CAB1D005CD156 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		29B38C372A8CAB44005CD156 /* ToDoApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ToDoApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		29B38C382A8CAB44005CD156 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		29B38C392A8CAB45005CD156 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		29B38C3A2A8CAB45005CD156 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		29B38C3B2A8CAB45005CD156 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		29B38C3C2A8CAB45005CD156 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		29B38C3D2A8CAB45005CD156 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		29B38C3E2A8CAB46005CD156 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		29B38C3F2A8CAB46005CD156 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		29B38C402A8CAB46005CD156 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		29B38C412A8CAB46005CD156 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		29B38C422A8CAB47005CD156 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		29B38C482A8CAC78005CD156 /* toDo.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = toDo.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +90,7 @@
 				296DC2F92A799D9C009BBF4E /* README.md */,
 				296DC2DA2A78BB6B009BBF4E /* ToDoApp */,
 				296DC2D92A78BB6B009BBF4E /* Products */,
+				29B38C352A8CAB1D005CD156 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +113,19 @@
 				296DC2E42A78BB6C009BBF4E /* Assets.xcassets */,
 				296DC2E62A78BB6C009BBF4E /* LaunchScreen.storyboard */,
 				296DC2E92A78BB6C009BBF4E /* Info.plist */,
+				29B38C482A8CAC78005CD156 /* toDo.sqlite */,
+				29B38C3E2A8CAB46005CD156 /* FMDatabase.h */,
+				29B38C3C2A8CAB45005CD156 /* FMDatabase.m */,
+				29B38C412A8CAB46005CD156 /* FMDatabaseAdditions.h */,
+				29B38C382A8CAB44005CD156 /* FMDatabaseAdditions.m */,
+				29B38C422A8CAB47005CD156 /* FMDatabasePool.h */,
+				29B38C402A8CAB46005CD156 /* FMDatabasePool.m */,
+				29B38C392A8CAB45005CD156 /* FMDatabaseQueue.h */,
+				29B38C3F2A8CAB46005CD156 /* FMDatabaseQueue.m */,
+				29B38C3A2A8CAB45005CD156 /* FMDB.h */,
+				29B38C3B2A8CAB45005CD156 /* FMResultSet.h */,
+				29B38C3D2A8CAB45005CD156 /* FMResultSet.m */,
+				29B38C372A8CAB44005CD156 /* ToDoApp-Bridging-Header.h */,
 			);
 			path = ToDoApp;
 			sourceTree = "<group>";
@@ -151,6 +185,14 @@
 			path = viewModel;
 			sourceTree = "<group>";
 		};
+		29B38C352A8CAB1D005CD156 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B38C362A8CAB1D005CD156 /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -186,6 +228,7 @@
 				TargetAttributes = {
 					296DC2D72A78BB6B009BBF4E = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -216,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				296DC2E82A78BB6C009BBF4E /* LaunchScreen.storyboard in Resources */,
+				29B38C492A8CAC78005CD156 /* toDo.sqlite in Resources */,
 				296DC2E52A78BB6C009BBF4E /* Assets.xcassets in Resources */,
 				296DC2E32A78BB6B009BBF4E /* Main.storyboard in Resources */,
 			);
@@ -230,7 +274,10 @@
 			files = (
 				296DC2F62A78BDBE009BBF4E /* RegistrationPage.swift in Sources */,
 				296DC2E02A78BB6B009BBF4E /* HomePage.swift in Sources */,
+				29B38C452A8CAB47005CD156 /* FMResultSet.m in Sources */,
+				29B38C442A8CAB47005CD156 /* FMDatabase.m in Sources */,
 				29B38B4F2A8769F3005CD156 /* HomePageViewModel.swift in Sources */,
+				29B38C462A8CAB47005CD156 /* FMDatabaseQueue.m in Sources */,
 				296DC2DC2A78BB6B009BBF4E /* AppDelegate.swift in Sources */,
 				293C74272A7D043A0028B2BB /* cellToDo.swift in Sources */,
 				29B38B4C2A8769C2005CD156 /* ToDoDaoRepository.swift in Sources */,
@@ -238,7 +285,9 @@
 				296DC2F82A78BDE8009BBF4E /* DetailPage.swift in Sources */,
 				296DC2DE2A78BB6B009BBF4E /* SceneDelegate.swift in Sources */,
 				29B38B512A876A08005CD156 /* RegistrationPageViewModel.swift in Sources */,
+				29B38C472A8CAB47005CD156 /* FMDatabasePool.m in Sources */,
 				296DC2F22A78BC86009BBF4E /* toDo.swift in Sources */,
+				29B38C432A8CAB47005CD156 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +432,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -400,6 +450,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yesiltas.ToDoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ToDoApp/ToDoApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -410,6 +462,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -427,6 +480,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yesiltas.ToDoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ToDoApp/ToDoApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

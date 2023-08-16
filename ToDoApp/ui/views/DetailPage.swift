@@ -10,6 +10,7 @@ import UIKit
 class DetailPage: UIViewController {
     
     var note:toDo?
+    var viewModel = DetailPageViewModel()
     
     @IBOutlet weak var tfNoteDetail: UITextField!
     
@@ -26,12 +27,8 @@ class DetailPage: UIViewController {
     @IBAction func buttonUpdate(_ sender: Any) {
         if let no = tfNoteDetail.text,
            let n = note{
-        update(id: n.id!, name: no)
+            viewModel.update(id: n.id!, name: no)
         }
     }
-    func update(id:Int, name:String){
-        print("Update ToDo: \(id)- \(name)")
-        
-        
-    }
+   
 }

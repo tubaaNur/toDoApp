@@ -10,6 +10,9 @@ import UIKit
 class RegistrationPage: UIViewController {
     @IBOutlet weak var tfNote: UITextField!
     
+    
+    var viewModel = RegistrationPageViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +27,8 @@ class RegistrationPage: UIViewController {
     }
     
     func save(name:String) {
-        print("Save ToDo : \(name)")
+        if let pn = tfNote.text{
+            viewModel.save(name: pn)
+        }
     }
 }
