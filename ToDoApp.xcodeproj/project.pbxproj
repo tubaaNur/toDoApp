@@ -28,7 +28,6 @@
 		29B38C462A8CAB47005CD156 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B38C3F2A8CAB46005CD156 /* FMDatabaseQueue.m */; };
 		29B38C472A8CAB47005CD156 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B38C402A8CAB46005CD156 /* FMDatabasePool.m */; };
 		29B38C492A8CAC78005CD156 /* toDo.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 29B38C482A8CAC78005CD156 /* toDo.sqlite */; };
-		29B38C4B2A8CBAFE005CD156 /* Screen Recording 2023-08-16 at 11.02.40.mov in Resources */ = {isa = PBXBuildFile; fileRef = 29B38C4A2A8CBAFE005CD156 /* Screen Recording 2023-08-16 at 11.02.40.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,7 +62,6 @@
 		29B38C412A8CAB46005CD156 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
 		29B38C422A8CAB47005CD156 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
 		29B38C482A8CAC78005CD156 /* toDo.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = toDo.sqlite; sourceTree = "<group>"; };
-		29B38C4A2A8CBAFE005CD156 /* Screen Recording 2023-08-16 at 11.02.40.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "Screen Recording 2023-08-16 at 11.02.40.mov"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				296DC2F92A799D9C009BBF4E /* README.md */,
-				29B38C4A2A8CBAFE005CD156 /* Screen Recording 2023-08-16 at 11.02.40.mov */,
 				296DC2DA2A78BB6B009BBF4E /* ToDoApp */,
 				296DC2D92A78BB6B009BBF4E /* Products */,
 				29B38C352A8CAB1D005CD156 /* Frameworks */,
@@ -264,7 +261,6 @@
 				296DC2E82A78BB6C009BBF4E /* LaunchScreen.storyboard in Resources */,
 				29B38C492A8CAC78005CD156 /* toDo.sqlite in Resources */,
 				296DC2E52A78BB6C009BBF4E /* Assets.xcassets in Resources */,
-				29B38C4B2A8CBAFE005CD156 /* Screen Recording 2023-08-16 at 11.02.40.mov in Resources */,
 				296DC2E32A78BB6B009BBF4E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
